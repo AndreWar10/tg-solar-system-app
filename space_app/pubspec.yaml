@@ -1,0 +1,72 @@
+name: space_app
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+#
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #consumo API  
+  http: ^0.13.5 
+  #Injeção de dependência 
+  get_it: ^7.2.0
+  #Comparação de instâncias de mesma classe
+  equatable: ^2.0.5
+  #Tratamento de erros
+  either_dart: ^0.2.0
+  #gerenciador de estados
+  flutter_bloc: ^8.1.1
+  #google fonts
+  google_fonts: ^3.0.1
+  #trabalhar com url
+  url_launcher:
+  share_plus: ^4.0.10  
+  #lottie animation
+  lottie:
+  #font google
+  font_awesome_flutter: ^9.0.0
+  
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+# The following section is specific to Flutter packages.
+flutter:
+  assets:
+    #lottie animation
+    - assets/lottie.json
+    #background
+    - assets/background/background100.png
+    - assets/background/background50.png
+    - assets/background/background25.png
+    #get started
+    - assets/background/astronauta.png
+    - assets/background/planeta.png
+    - assets/background/satelite.png
+    #astronauta
+    - assets/astronauta/celular.png
+    - assets/astronauta/cadastro.png
+    - assets/astronauta/trabalhando.png
+
+ 
+  
+
+  uses-material-design: true
+
+  
