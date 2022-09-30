@@ -13,6 +13,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+
+
   #consumo API  
   http: ^0.13.5 
   #Injeção de dependência 
@@ -32,6 +38,10 @@ dependencies:
   lottie:
   #font google
   font_awesome_flutter: ^9.0.0
+  #busca
+  flutter_typeahead:
+  #
+  intl:
   
 
 
@@ -63,10 +73,22 @@ flutter:
     - assets/astronauta/celular.png
     - assets/astronauta/cadastro.png
     - assets/astronauta/trabalhando.png
+    #imagem planetas
+    - assets/planets/Mercúrio.png
+    - assets/planets/Vênus.png
+    - assets/planets/Terra.png
+    - assets/planets/Marte.png
+    - assets/planets/Júpiter.png
+    - assets/planets/Saturno.png
+    - assets/planets/Urano.png
+    - assets/planets/Netuno.png
+    - assets/planets/Plutão.png
+    - assets/planets/Sol.png
 
  
   
 
   uses-material-design: true
+  generate: true
 
   
