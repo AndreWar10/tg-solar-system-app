@@ -5,6 +5,10 @@ class API {
   //API Notícias Astronômicas
   static const String newsBaseUrl = 'https://api.spaceflightnewsapi.net/v3/articles';
   static String news = newsBaseUrl;
+  //API Exoplanetas
+  static const String exoplanetBaseUrl = 'https://exoplanet-api.herokuapp.com/exoplanet/';
+  static String exoplanet = exoplanetBaseUrl;
+
 
 
 
