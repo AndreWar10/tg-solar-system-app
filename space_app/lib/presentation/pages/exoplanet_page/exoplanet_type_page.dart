@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:space_app/presentation/pages/exoplanet_page/exoplanet_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+class ExoplanetTypePage extends StatelessWidget {
+  const ExoplanetTypePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Tela inicial'),centerTitle: true),
+      appBar: AppBar(title: Text('Exoplanetas'), centerTitle: true),
       body: Container(
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/background/background100.png'),
             fit: BoxFit.cover,
@@ -17,28 +19,28 @@ class HomePage extends StatelessWidget {
         ),
         child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              botao(
-                text: 'sistema solar',
-                rota: '/sistemasolar',
+            children:const  [
+              botaof(
+                text: 'habitaveis',
+                rota: '/sistemasolar', habitable: false, noHabitable: true,
               ),
               SizedBox(
                 height: 20,
               ),
-              botao(
-                text: 'news',
-                rota: '/news',
+              botaof(
+                text: 'não habitaveis',
+                rota: '/news',habitable: true, noHabitable: false,
               ),
               SizedBox(
                 height: 20,
               ),
-              botao(
-                text: 'exoplanetas',
-                rota: '/exoplanets',
+              botaof(
+                text: 'todos',
+                rota: '/exoplanets',habitable: true, noHabitable: true,
               ),
             ],
+            
           ),
         ),
       ),
@@ -47,16 +49,24 @@ class HomePage extends StatelessWidget {
 }
 
 // ignore: camel_case_types
-class botao extends StatelessWidget {
-  const botao({
-    Key? key,
-    required this.text,
-    required this.rota,
-  }) : super(key: key);
+class botaof extends StatefulWidget {
+  const botaof({Key? key, required this.text, required this.rota, required this.habitable, required this.noHabitable}) : super(key: key);
 
-  final String text;
+   final String text;
   final String rota;
+  final bool habitable;
+  final bool noHabitable;
 
+  @override
+  State<botaof> createState() => _botaofState();
+}
+
+
+
+// ignore: camel_case_types
+class _botaofState extends State<botaof> {
+
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -80,14 +90,20 @@ class botao extends StatelessWidget {
           //     context,
           //     listen: false);
           // provider.googleLogin();
-          Navigator.of(context).pushNamed(rota);
+
+             Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => ExoplanetPage(viewHabitable: widget.habitable, viewNoHabitable: widget.noHabitable,),
+        ),
+      );
         },
         // icon: FaIcon(
         //   FontAwesomeIcons.google,
         //   color: Colors.deepPurple,
         // ),
         label: Text(
-          text,
+          widget.text,
           style: GoogleFonts.montserrat(
             fontSize: 13,
           ),
@@ -95,5 +111,6 @@ class botao extends StatelessWidget {
         icon: Icon(Icons.ac_unit_rounded),
       ),
     );
+    
   }
 }

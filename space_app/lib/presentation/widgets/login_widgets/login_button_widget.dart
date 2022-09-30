@@ -31,6 +31,7 @@ class LoginButtonWidget extends StatelessWidget {
           //   // ignore: avoid_print
           //   print('erro');
           // }
+           Navigator.of(context).pushReplacementNamed('/home');
           
         },
         child: Text(

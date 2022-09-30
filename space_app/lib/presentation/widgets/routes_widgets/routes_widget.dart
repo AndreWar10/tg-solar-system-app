@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../pages/exoplanet_page/exoplanet_page.dart';
+import 'package:space_app/presentation/pages/exoplanet_page/exoplanet_type_page.dart';
 import '../../pages/home_page/home_page.dart';
 import '../../pages/login_page/login_page.dart';
 import '../../pages/news_page/news_page.dart';
@@ -18,7 +18,7 @@ class RoutesWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: '/exoplanets',
+      initialRoute: '/splash',
       routes: {
         //Animação inicial da aplicação
         '/splash': (_) => SplashPage(),
@@ -35,7 +35,7 @@ class RoutesWidget extends StatelessWidget {
         //Lista de Noticias
         '/news': (_) => NewsPage(),
         //Lista de Exoplanetas
-        '/exoplanets': (_) => ExoplanetPage(viewHabitable: false, viewNoHabitable: true,),
+        '/exoplanets': (_) => ExoplanetTypePage(),
 
       },
     );

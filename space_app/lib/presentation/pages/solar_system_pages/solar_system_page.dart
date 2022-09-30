@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../bloc/solar_system_bloc/solar_system_state.dart';
-import '../../widgets/solar_system_widgets/logout_button_widget.dart';
 import '../../widgets/solar_system_widgets/solar_system_gridview_widget.dart';
 import '../../widgets/solar_system_widgets/solar_system_input_widget.dart';
 import '../../widgets/solar_system_widgets/solar_system_subtitle_widget.dart';
@@ -19,6 +17,7 @@ class SolarSystemPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Sistema Solar'),centerTitle: true,),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -29,12 +28,12 @@ class SolarSystemPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 50),
-              Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12),
-                child: LogoutButtonWidget(),
-              ),
               SizedBox(height: 30),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 12, right: 12),
+              //   child: LogoutButtonWidget(),
+              // ),
+              //SizedBox(height: 30),
               SolarSystemTitleWidget(),
               SizedBox(
                 height: 5,
