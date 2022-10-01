@@ -19,14 +19,14 @@ class NewsDateAndShareWidget extends StatelessWidget {
       children: [
         //DateFormat('dd/MM/yyyy - hh:mm').format(news.publishedAt),
         Text(
-          DateFormat('dd/MM/yyyy - hh:mm').format(news.publishedAt),
+          DateFormat('LLLL dd, yyyy').format(news.publishedAt),
           style:
-              TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey,),
         ),
         Spacer(),
         IconButton(
           icon: Icon(Icons.share),
-          color: Color.fromARGB(255, 109, 108, 108),
+          color: Colors.deepPurpleAccent,
           iconSize: 25,
           onPressed: () async {
             var urlPreview = news.url;

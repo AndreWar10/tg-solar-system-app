@@ -12,12 +12,16 @@ class NewsTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      news.summary,
-      maxLines: 1,
-      style: TextStyle(
-        fontSize: 14,
-      ),
+    return Wrap(
+      children: [
+        Text(
+          news.summary,
+          style: TextStyle(
+            fontSize: 20, color: 
+            Colors.white, 
+          ),maxLines: 3,
+        ),
+      ],
     );
   }
 }

@@ -16,7 +16,7 @@ class NewsItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, left: 8, right: 8, bottom: 10),
+      padding: const EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
       child: Center(
         child: GestureDetector(
           onTap: () => Navigator.push(
@@ -28,22 +28,27 @@ class NewsItemWidget extends StatelessWidget {
             ),
           ),
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.9,
             decoration: BoxDecoration(
-                color: Colors.white70, borderRadius: BorderRadius.circular(8)),
-            child: Padding(
+                color: Color(0xFF2C2E2F), borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                NewsImageWidget(news: news),
+                SizedBox(height: 5),
+                Padding(
               padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  NewsImageWidget(news: news),
-                  SizedBox(height: 10),
-                  NewsTitleWidget(news: news),
-                  SizedBox(height: 10),
-                  NewsTextWidget(news: news),
-                  NewsDateAndShareWidget(news: news),
-                ],
-              ),
+                  child: NewsTitleWidget(news: news),
+                ),
+                SizedBox(height: 5),
+                Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
+                  child: NewsTextWidget(news: news),
+                ),
+                Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
+                  child: NewsDateAndShareWidget(news: news),
+                ),
+              ],
             ),
           ),
         ),

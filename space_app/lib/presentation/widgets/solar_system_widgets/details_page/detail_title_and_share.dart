@@ -25,6 +25,7 @@ class DetailTitleAndShare extends StatelessWidget {
           ),
         ),
         Spacer(),
+      
         Padding(
           padding: const EdgeInsets.only(top: 2),
           child: IconButton(

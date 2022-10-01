@@ -26,10 +26,11 @@ class _NewsPageState extends State<NewsPage> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/background/background50.png'),
-            fit: BoxFit.cover,
-          ),
+          // image: DecorationImage(
+          //   image: AssetImage('assets/background/background50.png'),
+          //   fit: BoxFit.cover,
+          // ),
+          color: Colors.black,
         ),
         child: BlocBuilder(
           bloc: getIt.get<NewsBloc>()..add(FetchNews()),

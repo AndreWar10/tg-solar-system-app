@@ -506,8 +506,8 @@ class Core {
     bool ?reused;
     bool? landSuccess;
     bool? landingIntent;
-    LandingType ?landingType;
-    LandingVehicle ?landingVehicle;
+    String ?landingType;
+    String ?landingVehicle;
 
     factory Core.fromJson(Map<String, dynamic> json) => Core(
         coreSerial: json["core_serial"],
@@ -518,8 +518,8 @@ class Core {
         reused: json["reused"],
         landSuccess: json["land_success"],
         landingIntent: json["landing_intent"],
-        landingType: json["landing_type"] == null ? null : landingTypeValues.map[json["landing_type"]],
-        landingVehicle: json["landing_vehicle"] == null ? null : landingVehicleValues.map[json["landing_vehicle"]],
+        landingType: json["landing_type"],
+        landingVehicle: json["landing_vehicle"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -628,7 +628,7 @@ class Payload {
     List<String>? customers;
     String ?nationality;
     String ?manufacturer;
-    PayloadType? payloadType;
+    String? payloadType;
     double? payloadMassKg;
     double ?payloadMassLbs;
     String ?orbit;
@@ -647,7 +647,7 @@ class Payload {
         customers: json["customers"] == null ? null : List<String>.from(json["customers"].map((x) => x)),
         nationality: json["nationality"],
         manufacturer: json["manufacturer"],
-        payloadType: json["payload_type"] == null ? null : payloadTypeValues.map[json["payload_type"]],
+        payloadType: json["payload_type"],
         payloadMassKg: json["payload_mass_kg"] == null ? null : json["payload_mass_kg"].toDouble(),
         payloadMassLbs: json["payload_mass_lbs"] == null ? null : json["payload_mass_lbs"].toDouble(),
         orbit: json["orbit"],

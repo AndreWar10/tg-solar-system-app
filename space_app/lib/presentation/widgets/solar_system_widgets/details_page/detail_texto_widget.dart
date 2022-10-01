@@ -18,7 +18,7 @@ class DetailTextoWidget extends StatelessWidget {
         Text(
           widget.planet.resume,
           style: GoogleFonts.montserrat(
-            fontSize: 14,
+            fontSize: 15,
           ),
         )
       ],

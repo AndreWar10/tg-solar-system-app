@@ -38,6 +38,13 @@ class HomePage extends StatelessWidget {
                 text: 'exoplanetas',
                 rota: '/exoplanets',
               ),
+              SizedBox(
+                height: 20,
+              ),
+               botao(
+                text: 'spacex',
+                rota: '/spacex',
+              ),
             ],
           ),
         ),
@@ -86,11 +93,16 @@ class botao extends StatelessWidget {
         //   FontAwesomeIcons.google,
         //   color: Colors.deepPurple,
         // ),
-        label: Text(
-          text,
-          style: GoogleFonts.montserrat(
-            fontSize: 13,
-          ),
+        label: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              text,
+              style: GoogleFonts.montserrat(
+                fontSize: 13,
+              ),
+            ),
+          ],
         ),
         icon: Icon(Icons.ac_unit_rounded),
       ),

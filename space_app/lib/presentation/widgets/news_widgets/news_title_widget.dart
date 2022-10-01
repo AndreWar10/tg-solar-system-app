@@ -13,9 +13,10 @@ class NewsTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      news.title,
+      news.newsSite,
       maxLines: 1,
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      style: TextStyle(
+          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),
     );
   }
 }
@@ -34,6 +35,11 @@ class NewsImageWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(8),
       child: Image.network(
         news.imageUrl,
+        loadingBuilder: (_, child, progress) {
+          if (progress == null) return child;
+          return CircularProgressIndicator
+              .adaptive(); //adaptative muda de acordo com a plataforma android/ios,etc
+        },
       ),
     );
   }
