@@ -24,6 +24,7 @@ class SpacexEntitie {
     this.links,
     this.details,
     this.staticFireDateUtc,
+    
     this.staticFireDateUnix,
    // this.timeline,
     this.crew,
