@@ -8,6 +8,10 @@ class API {
   //API Exoplanetas
   static const String exoplanetBaseUrl = 'https://exoplanet-api.herokuapp.com/exoplanet/';
   static String exoplanet = exoplanetBaseUrl;
+  //API Spacex
+  static const String spacexBaseUrl = 'https://api.spacexdata.com/v2/launches';
+  static String spacex = spacexBaseUrl;
+
 
 
 

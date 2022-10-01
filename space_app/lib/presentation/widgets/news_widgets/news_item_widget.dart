@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../domain/entities/news_entitie.dart';
 import '../../pages/news_page/news_detail_page.dart';
 import 'news_date_and_share_widgets.dart';

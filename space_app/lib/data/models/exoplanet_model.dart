@@ -21,11 +21,11 @@ class ExoplanetModel {
     required this.id,
     required this.name,
     required this.habitability,
-     this.semiMajorAxis,
-     this.orbitalPeriod,
-     this.mass,
-     this.radius,
-     this.density,
+    this.semiMajorAxis,
+    this.orbitalPeriod,
+    this.mass,
+    this.radius,
+    this.density,
     required this.v,
   });
 
