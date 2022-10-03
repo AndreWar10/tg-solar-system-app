@@ -11,7 +11,7 @@ class LoginOrTextWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: Text(
-        'Or ',
+        'Ou ',
         style: GoogleFonts.montserrat(
           fontSize: 12,
         ),

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../domain/entities/spacex_entitie.dart';
 
@@ -18,7 +19,7 @@ class SpacexMissionNameWidget extends StatelessWidget {
       child: 
       Text(
         spacex.missionName!,
-        style: TextStyle(
+        style: GoogleFonts.montserrat(
             fontSize: 22, color: Colors.white),
         maxLines: 1,
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../domain/entities/news_entitie.dart';
@@ -21,7 +22,7 @@ class DetailDateWidget extends StatelessWidget {
           Text(
             DateFormat('MMMM dd, yyyy - hh:mm')
                 .format(news.publishedAt),
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
                 fontSize: 14,
                 color: Colors.grey,
                 fontWeight: FontWeight.bold),

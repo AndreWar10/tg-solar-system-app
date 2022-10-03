@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../domain/entities/news_entitie.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_date_widget.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_image_widget.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_news_text.dart';
+import '../../widgets/news_widgets/detail_news_widgets/detail_official_site_news.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_row_share.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_site_publication_widget.dart';
 import '../../widgets/news_widgets/detail_news_widgets/detail_title_news_widget.dart';
@@ -15,7 +17,12 @@ class NewsDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(news.title), centerTitle: true),
+      appBar: AppBar(
+          title: Text(
+            news.title,
+            style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+          ),
+          centerTitle: true),
       body: Center(
         child: Column(
           children: [
@@ -29,9 +36,12 @@ class NewsDetailPage extends StatelessWidget {
             DetailImageWidget(news: news),
             SizedBox(height: 20),
             DetailNewsTextWidget(news: news),
+            SizedBox(height: 20),
+            DetailOfficialNewsWidget(news: news)
           ],
         ),
       ),
     );
   }
 }
+

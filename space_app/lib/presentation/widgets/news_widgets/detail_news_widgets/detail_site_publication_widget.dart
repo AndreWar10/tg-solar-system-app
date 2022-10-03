@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../domain/entities/news_entitie.dart';
 
@@ -19,7 +20,7 @@ class DetailSitePublicationWidget extends StatelessWidget {
         children: [
           Text(
             news.newsSite,
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
                 color: Colors.grey),

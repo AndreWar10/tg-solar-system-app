@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../bloc/solar_system_bloc/solar_system_state.dart';
 import '../../widgets/solar_system_widgets/solar_system_gridview_widget.dart';
 import '../../widgets/solar_system_widgets/solar_system_input_widget.dart';
@@ -17,7 +18,7 @@ class SolarSystemPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sistema Solar'),centerTitle: true,),
+      appBar: AppBar(title: Text('Sistema Solar', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold)),centerTitle: true,),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

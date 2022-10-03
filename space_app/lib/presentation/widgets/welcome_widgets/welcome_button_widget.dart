@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeButtonWidget extends StatelessWidget {
   const WelcomeButtonWidget({
@@ -26,7 +27,7 @@ class WelcomeButtonWidget extends StatelessWidget {
           onPressed: () => Navigator.of(context).pushReplacementNamed("/login"),
           child: Text(
             'Iniciar Jornada',
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple),

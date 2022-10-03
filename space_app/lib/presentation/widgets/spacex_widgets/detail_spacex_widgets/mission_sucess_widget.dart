@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../domain/entities/spacex_entitie.dart';
 
@@ -28,7 +29,7 @@ class MissionSucessWidget extends StatelessWidget {
                       child: Center(
                           child: Text(
                         'Sucesso',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                           color: Colors.white,
                           fontSize: 20,
                         ),
@@ -45,7 +46,7 @@ class MissionSucessWidget extends StatelessWidget {
                       child: Center(
                           child: Text(
                         'Falha',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: GoogleFonts.montserrat(color: Colors.white, fontSize: 20),
                       ))))),
     );
   }

@@ -33,7 +33,7 @@ class DetailSolarSystemPage extends StatelessWidget {
         DetailCabecalhoWidget(planet: widget.planet),
         SliverToBoxAdapter(
           child: SizedBox(
-            height: MediaQuery.of(context).size.height, //tela inteira
+            height: MediaQuery.of(context).size.height * 0.9, //tela inteira
             child: Stack(
               children: [
                 DetailColorBackgroundWidget(widget: widget),
@@ -58,12 +58,12 @@ class DetailSolarSystemPage extends StatelessWidget {
                         SizedBox(height: 10),
                         DetailSubtitleWidget(widget: widget),
                         SizedBox(height: 10),
-                        
                         DetailTextoWidget(widget: widget),
                         SizedBox(height: 20),
                         DetailTecnicalInformationWidget(widget: widget),
-                        SizedBox(height: 20),
+                        SizedBox(height: 25),
                         DetailPlayVideoWidget(widget: widget),
+                        
                       ],
                     ),
                   ),

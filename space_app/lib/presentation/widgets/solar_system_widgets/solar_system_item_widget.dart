@@ -4,7 +4,8 @@ import '../../../domain/entities/solar_system_entitie.dart';
 import 'details_page/container_solar_system_details.dart';
 
 class SolarSystemItemWidget extends StatelessWidget {
-  const SolarSystemItemWidget({Key? key, required this.planet, required this.index})
+  const SolarSystemItemWidget(
+      {Key? key, required this.planet, required this.index})
       : super(key: key);
 
   final SystemSolarEntitie planet;
@@ -14,8 +15,7 @@ class SolarSystemItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final String planeta = planet.name;
     return GestureDetector(
-      onTap: () =>
-      Navigator.push(
+      onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
           builder: (_) => DetailSolarSystemContainer(planet: planet),
@@ -73,11 +73,13 @@ class SolarSystemItemWidget extends StatelessWidget {
                       Wrap(
                         children: [
                           Text(
-                            planet.cardtext!,
+                            planet.resume,
                             style: GoogleFonts.montserrat(
                               fontSize: 12,
                               color: Colors.white,
                             ),
+                            maxLines: 5,
+                            overflow: TextOverflow.ellipsis,
                           )
                         ],
                       ),

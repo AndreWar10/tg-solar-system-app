@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../domain/entities/news_entitie.dart';
 
@@ -15,8 +16,10 @@ class NewsTitleWidget extends StatelessWidget {
     return Text(
       news.newsSite,
       maxLines: 1,
-      style: TextStyle(
-          fontSize: 18, fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),
+      style: GoogleFonts.montserrat(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Colors.deepPurpleAccent),
     );
   }
 }
@@ -32,7 +35,10 @@ class NewsImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(8),
+        topRight: Radius.circular(8),
+      ),
       child: Image.network(
         news.imageUrl,
         loadingBuilder: (_, child, progress) {

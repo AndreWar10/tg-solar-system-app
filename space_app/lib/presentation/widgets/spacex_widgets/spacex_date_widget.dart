@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../domain/entities/spacex_entitie.dart';
@@ -17,7 +18,7 @@ class SpacexDateWidget extends StatelessWidget {
     return Text(
       DateFormat('MMMM dd,  yyyy')
           .format(spacex.launchDateUtc!),
-      style: TextStyle(color: Colors.deepPurpleAccent),
+      style: GoogleFonts.montserrat(color: Colors.deepPurpleAccent),
     );
   }
 }

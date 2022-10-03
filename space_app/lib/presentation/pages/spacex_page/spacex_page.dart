@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../domain/entities/spacex_entitie.dart';
 import '../../widgets/spacex_widgets/spacex_listview_widget.dart';
 
@@ -13,15 +14,14 @@ class SpacexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lançamentos'),
+        title: Text('Lançamentos Espaciais',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold)),
         centerTitle: true,
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.black),
         child: SingleChildScrollView(
           child: Padding(
-            padding:
-                const EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 20),
+            padding:const EdgeInsets.only(top: 0, left: 20, right: 20, bottom: 20),
             child: Column(
               children: [
                 SpacexListViewWidget(spacex: spacex),

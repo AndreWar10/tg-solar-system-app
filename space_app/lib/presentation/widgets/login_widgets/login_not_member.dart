@@ -9,25 +9,25 @@ class LoginNotMemberWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0, bottom: 10),
+      padding: const EdgeInsets.only(top: 22.0, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Not a member?',
+            'Ainda não tem conta? ',
             style: GoogleFonts.montserrat(
               fontSize: 12,
               fontWeight: FontWeight.bold,
             ),
           ),
-          TextButton(
+          GestureDetector(
+            onTap: () => Navigator.of(context).pushNamed('/register'),
             child: Text(
-              'Register Now',
+              'Cadastrar-se',
               style: GoogleFonts.montserrat(
-                fontSize: 14,
+                fontSize: 13, fontWeight: FontWeight.bold, color: Colors.deepPurple
               ),
             ),
-            onPressed: () => Navigator.of(context).pushNamed('/register'),            
           ),
         ],
       ),

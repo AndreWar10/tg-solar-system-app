@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-import '../../../../domain/entities/spacex_entitie.dart';
+import '../../../../../domain/entities/spacex_entitie.dart';
 
 class ContainerCimaWidget extends StatelessWidget {
   const ContainerCimaWidget({
@@ -29,7 +30,7 @@ class ContainerCimaWidget extends StatelessWidget {
                   child: Center(
                     child: Text(
                       spacex.missionName!,
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 35,
                         color: Colors.white,
                       ),
@@ -44,7 +45,7 @@ class ContainerCimaWidget extends StatelessWidget {
             ),
             Text(
               DateFormat('MMMM dd,  yyyy').format(spacex.launchDateUtc!),
-              style: TextStyle(color: Colors.deepPurpleAccent),
+              style: GoogleFonts.montserrat(color: Colors.deepPurpleAccent),
             ),
             SizedBox(
               height: 10,

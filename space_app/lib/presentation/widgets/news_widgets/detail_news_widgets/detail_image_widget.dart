@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../../domain/entities/news_entitie.dart';
 
 class DetailImageWidget extends StatelessWidget {
@@ -12,16 +11,10 @@ class DetailImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () async {
-        final Uri url = Uri.parse(news.url);
-        await launchUrl(url);
-      },
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Image.network(
-          news.imageUrl,
-        ),
+    return ClipRRect(
+      //borderRadius: BorderRadius.circular(20),
+      child: Image.network(
+        news.imageUrl,
       ),
     );
   }

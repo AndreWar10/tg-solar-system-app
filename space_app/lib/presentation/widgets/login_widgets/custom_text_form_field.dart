@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextFormFieldWidget extends StatefulWidget {
   const CustomTextFormFieldWidget({
@@ -52,6 +53,8 @@ class _CustomTextFormFieldWidgetState extends State<CustomTextFormFieldWidget> {
                     },
                   ),
                 ),
+                style: GoogleFonts.montserrat(),
+
                 obscureText: _showPassword == false
                     ? true
                     : false, //esconder/mostrar password
@@ -63,6 +66,7 @@ class _CustomTextFormFieldWidgetState extends State<CustomTextFormFieldWidget> {
                 //onSaved: (value) => controller.email = value,
                 decoration: InputDecoration(
                     border: InputBorder.none, hintText: 'Email'),
+                style: GoogleFonts.montserrat(),
               ),
       ),
     );

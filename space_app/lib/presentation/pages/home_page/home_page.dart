@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Tela inicial'),centerTitle: true),
+      appBar: AppBar(title: Text('Tela inicial',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold)),centerTitle: true),
       body: Container(
          decoration: BoxDecoration(
           image: DecorationImage(
@@ -44,6 +44,13 @@ class HomePage extends StatelessWidget {
                botao(
                 text: 'spacex',
                 rota: '/spacex',
+              ),
+              SizedBox(
+                height: 20,
+              ),
+               botao(
+                text: 'obervatórios',
+                rota: '/observatorios',
               ),
             ],
           ),

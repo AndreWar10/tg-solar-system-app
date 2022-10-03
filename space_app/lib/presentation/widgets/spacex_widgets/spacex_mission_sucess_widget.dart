@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SpacexMissionSucessWidget extends StatelessWidget {
   const SpacexMissionSucessWidget({
@@ -8,7 +9,7 @@ class SpacexMissionSucessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text('Sucesso',
-        style: TextStyle(
+        style: GoogleFonts.montserrat(
             fontSize: 16, color: Colors.grey));
   }
 }

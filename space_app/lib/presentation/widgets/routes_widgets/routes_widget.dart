@@ -4,6 +4,7 @@ import '../../bloc/spacex_bloc/spacex_bloc_implementation.dart';
 import '../../pages/home_page/home_page.dart';
 import '../../pages/login_page/login_page.dart';
 import '../../pages/news_page/news_page.dart';
+import '../../pages/observatorios_page/observatorios_page.dart';
 import '../../pages/register_page/register_page.dart';
 import '../../bloc/solar_system_bloc/solar_system_bloc_imp.dart';
 import '../../pages/splash_page/splash_page.dart';
@@ -39,6 +40,8 @@ class RoutesWidget extends StatelessWidget {
         '/exoplanets': (_) => ExoplanetTypePage(),
         //Lista Spacex
         '/spacex': (_) => SpacexBlocImplementation(),
+        //Lista Observatorios
+        '/observatorios': (_) => ObservatoriosPage(),
 
       },
     );

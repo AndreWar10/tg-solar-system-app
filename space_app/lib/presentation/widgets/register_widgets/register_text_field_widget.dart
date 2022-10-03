@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomRegisterTextField extends StatefulWidget {
   const CustomRegisterTextField({
@@ -38,6 +39,8 @@ class _CustomRegisterTextFieldState extends State<CustomRegisterTextField> {
                   controller: widget.controller,
                   decoration: InputDecoration(
                       border: InputBorder.none, hintText: widget.hintText),
+                                        style: GoogleFonts.montserrat()
+
                 )
               : TextField(
                   decoration: InputDecoration(
@@ -56,6 +59,7 @@ class _CustomRegisterTextFieldState extends State<CustomRegisterTextField> {
                       },
                     ),
                   ),
+                   style: GoogleFonts.montserrat(),
                   obscureText: _showPassword == false
                       ? true
                       : false, //esconder/mostrar password

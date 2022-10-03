@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../../domain/entities/news_entitie.dart';
@@ -27,7 +28,7 @@ class DetailRowShareWidget extends StatelessWidget {
             child: Center(
                 child: Text(
               'Notícias',
-              style: TextStyle(
+              style: GoogleFonts.montserrat(
                   color: Colors.white, fontWeight: FontWeight.bold),
             )),
           ),

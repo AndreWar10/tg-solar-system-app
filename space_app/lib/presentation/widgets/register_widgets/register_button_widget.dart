@@ -40,7 +40,7 @@ class RegisterButtonWidget extends StatelessWidget {
             // });
           },
           child: Text(
-            ' Continue',
+            ' Continuar',
             style: GoogleFonts.montserrat(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

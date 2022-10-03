@@ -37,7 +37,7 @@ class LoginButtonGoogleWidget extends StatelessWidget {
           color: Colors.deepPurple,
         ),
         label: Text(
-          ' Sign Up with Google',
+          ' Entrar com Google',
           style: GoogleFonts.montserrat(
             fontSize: 13,
           ),

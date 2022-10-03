@@ -84,6 +84,28 @@ flutter:
     - assets/planets/Netuno.png
     - assets/planets/Plutão.png
     - assets/planets/Sol.png
+    #observatorios
+    - assets/observatorios/pucrs_1.png
+    - assets/observatorios/campomagro.jpg
+    - assets/observatorios/franca.jpg
+    - assets/observatorios/inpe.jpg
+    - assets/observatorios/luiz.png
+    - assets/observatorios/nacional.png
+    - assets/observatorios/observatorio-antares.jpg
+    - assets/observatorios/otto.png
+    - assets/observatorios/recife.jpg
+    - assets/observatorios/uesc.png
+    - assets/observatorios/ufes_vit.jpg
+    - assets/observatorios/ufmg.png
+    - assets/observatorios/ufop.jpeg 
+    - assets/observatorios/uspsp.jpg
+    - assets/observatorios/uspsc.jpg
+    - assets/observatorios/alagoas.png
+    #maps image
+    - assets/maps/maps.png
+
+
+
 
  
   
