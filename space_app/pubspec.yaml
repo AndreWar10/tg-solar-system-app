@@ -42,6 +42,7 @@ dependencies:
   flutter_typeahead:
   #
   intl:
+  bottom_navy_bar: ^6.0.0
   
 
 
@@ -73,6 +74,8 @@ flutter:
     - assets/astronauta/celular.png
     - assets/astronauta/cadastro.png
     - assets/astronauta/trabalhando.png
+    - assets/astronauta/astronauta-home.png
+
     #imagem planetas
     - assets/planets/Mercúrio.png
     - assets/planets/Vênus.png
@@ -103,6 +106,12 @@ flutter:
     - assets/observatorios/alagoas.png
     #maps image
     - assets/maps/maps.png
+    #icons
+    - assets/icons/observatorios.png
+    - assets/icons/sistemasolar.png
+    - assets/icons/noticias.png
+    - assets/icons/lancamentos.png
+
 
 
 

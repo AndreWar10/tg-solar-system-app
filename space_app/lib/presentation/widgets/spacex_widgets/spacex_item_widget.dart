@@ -28,7 +28,8 @@ class SpacexItemWidget extends StatelessWidget {
       ),
         child: Container(
           decoration: BoxDecoration(
-              color: Color(0xFF282A2E), borderRadius: BorderRadius.circular(12)),
+              color: Color(0xFF282A2E),
+               borderRadius: BorderRadius.circular(12)),
           child: Padding(
             padding:
                 const EdgeInsets.only(top: 8, left: 12, right: 12, bottom: 8),

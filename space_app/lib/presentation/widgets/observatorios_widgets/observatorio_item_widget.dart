@@ -34,7 +34,8 @@ class ItemObservatorioWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: Text(
                     observatorio.name,
-                    style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.montserrat(
+                        fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(height: 5),
@@ -54,17 +55,42 @@ class ItemObservatorioWidget extends StatelessWidget {
                                   observatorio: observatorio)),
                         ),
                         child: Container(
-                            height: 28,
-                            width: 85,
-                            decoration: BoxDecoration(
-                                color: Colors.deepPurpleAccent,
-                                borderRadius: BorderRadius.circular(30)),
-                            child: Center(
-                                child: Text(
-                              'Saiba Mais',
-                              style: GoogleFonts.montserrat(color: Colors.white),
-                            ))),
-                      )
+                          height: 30,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              color: Colors.deepPurpleAccent,
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Saiba mais',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                size: 12,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // Container(
+                        //     height: 28,
+                        //     width: 85,
+                        //     decoration: BoxDecoration(
+                        //         color: Colors.deepPurpleAccent,
+                        //         borderRadius: BorderRadius.circular(30)),
+                        //     child: Center(
+                        //         child: Text(
+                        //       'Saiba Mais',
+                        //       style: GoogleFonts.montserrat(color: Colors.white),
+                        //     ))
+                      ),
                     ],
                   ),
                 ),
@@ -77,4 +103,3 @@ class ItemObservatorioWidget extends StatelessWidget {
     );
   }
 }
-

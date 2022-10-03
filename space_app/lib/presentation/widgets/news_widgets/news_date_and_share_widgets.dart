@@ -27,7 +27,9 @@ class NewsDateAndShareWidget extends StatelessWidget {
             color: Colors.grey,
           ),
         ),
+
         Spacer(),
+
         GestureDetector(
           onTap: () => Navigator.push(
             context,
@@ -37,12 +39,53 @@ class NewsDateAndShareWidget extends StatelessWidget {
               ),
             ),
           ),
-          child: Text(
-                'Saiba Mais',
-                style: GoogleFonts.montserrat( fontWeight: FontWeight.bold
-                ,color: Colors.deepPurpleAccent),
-              ),
+          child: Container(
+            height: 30,
+            width: 100,
+            decoration: BoxDecoration(
+                color: Colors.deepPurpleAccent,
+                borderRadius: BorderRadius.circular(30)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Saiba mais',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.white,
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 12,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+          ),
         ),
+
+        // GestureDetector(
+        //   onTap: () => Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //       builder: (_) => NewsDetailPage(
+        //         news: news,
+        //       ),
+        //     ),
+        //   ),
+        //   child: Text(
+        //         'Saiba Mais',
+        //         style: GoogleFonts.montserrat( fontWeight: FontWeight.bold
+        //         ,color: Colors.deepPurpleAccent),
+        //       ),
+        // ),
+
+        // OK
+
+        //
+        //
+        //
         // Container(
         //     height: 28,
         //     width: 83,
@@ -53,7 +96,7 @@ class NewsDateAndShareWidget extends StatelessWidget {
         //         child: Text(
         //       'Saiba Mais',
         //       style: TextStyle(color: Colors.white),
-        //     ))), 
+        //     ))),
 
         // IconButton(
         //   icon: Icon(Icons.share),

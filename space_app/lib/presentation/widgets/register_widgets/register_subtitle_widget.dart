@@ -6,7 +6,7 @@ class RegisterSubtitleWidget extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final String _defaultSubtitle = "Olá, vou criar sua conta";
+  final String _defaultSubtitle = "Vou criar sua conta";
 
   @override
   Widget build(BuildContext context) {
