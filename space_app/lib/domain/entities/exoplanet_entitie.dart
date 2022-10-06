@@ -4,12 +4,12 @@ class ExoplanetEntitie {
     required this.id,
     required this.name,
     required this.habitability,
+    required this.v,
     this.semiMajorAxis,
     this.orbitalPeriod,
     this.mass,
     this.radius,
     this.density,
-    required this.v,
   });
 
   List<String> star;

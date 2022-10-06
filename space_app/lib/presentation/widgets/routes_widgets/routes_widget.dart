@@ -42,7 +42,6 @@ class RoutesWidget extends StatelessWidget {
         '/spacex': (_) => SpacexBlocImplementation(),
         //Lista Observatorios
         '/observatorios': (_) => ObservatoriosPage(),
-
       },
     );
   }

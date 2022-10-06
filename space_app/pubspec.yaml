@@ -42,8 +42,8 @@ dependencies:
   flutter_typeahead:
   #
   intl:
-  bottom_navy_bar: ^6.0.0
-  
+  #icone
+  flutter_launcher_icons: ^0.10.0  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -55,6 +55,11 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+
+flutter_icons:
+  image_path: 'assets/logo/planet.png'
+  android: true
+  ios: true
 
 
 # The following section is specific to Flutter packages.
@@ -111,6 +116,9 @@ flutter:
     - assets/icons/sistemasolar.png
     - assets/icons/noticias.png
     - assets/icons/lancamentos.png
+    #logo do app
+    - assets/logo/planet.png
+
 
 
 

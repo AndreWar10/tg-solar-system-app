@@ -1,6 +1,5 @@
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
-
 import '../domain/repositories/exoplanet_repository.dart';
 import '../domain/repositories/news_repository.dart';
 import '../domain/repositories/spacex_repository.dart';

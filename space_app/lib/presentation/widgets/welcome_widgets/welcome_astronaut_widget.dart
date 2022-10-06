@@ -16,7 +16,7 @@ class _WelcomeAstronautWidgetState extends State<WelcomeAstronautWidget>
 
   late final Animation<Offset> _animation = Tween(
     begin: Offset.zero,
-    end: Offset(0, 0.08),
+    end: Offset(0, 0.09),
   ).animate(_controller);
 
   @override

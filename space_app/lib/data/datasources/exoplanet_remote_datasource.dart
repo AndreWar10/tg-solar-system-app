@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-
 import '../../presentation/widgets/errors/exception.dart';
 import '../models/exoplanet_model.dart';
 import '../utils/apis.dart';

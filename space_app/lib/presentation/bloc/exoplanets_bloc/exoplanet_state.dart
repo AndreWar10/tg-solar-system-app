@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import '../../../domain/entities/exoplanet_entitie.dart';
 
 abstract class ExoplanetState extends Equatable {

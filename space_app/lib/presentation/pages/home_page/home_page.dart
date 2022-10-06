@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../widgets/home_page_widgets/astronaut_widget.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -26,10 +28,10 @@ class HomePage extends StatelessWidget {
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 30),
-                Image.asset(
-                  "assets/astronauta/astronauta-home.png",
-                  width: 190,
-                  height: 190,
+                Row(
+                  children: const[
+                    HomeAstronautWidget(),
+                  ],
                 ),
                 SizedBox(height: 15),
 
@@ -96,6 +98,8 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
 
 // ignore: camel_case_types
 class botao extends StatelessWidget {
