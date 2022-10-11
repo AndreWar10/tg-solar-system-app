@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:space_app/presentation/pages/exoplanet_page/exoplanet_type_page.dart';
+import '../../../data/repositories/auth_repository.dart';
+import '../../bloc/auth/auth_bloc.dart';
+import '../../bloc/auth/home_builder.dart';
 import '../../bloc/spacex_bloc/spacex_bloc_implementation.dart';
 import '../../pages/home_page/home_page.dart';
 import '../../pages/login_page/login_page.dart';
@@ -17,32 +21,42 @@ class RoutesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: '/splash',
-      routes: {
-        //Animação inicial da aplicação
-        '/splash': (_) => SplashPage(),
-        //Tela de Login
-        '/login': (_) => LoginPage(),
-        //Tela de Cadastro
-        '/register': (_) => RegisterPage(),
-        //Tela de boas-vindas
-        '/welcome': (_) => WelcomePage(),
-        //Tela inicial, que contem os temas
-        '/home': (_) => HomePage(),
-        //Lista Sistema Solar
-        '/sistemasolar': (_) => SolarSystemBlocImpl(),
-        //Lista de Noticias
-        '/news': (_) => NewsPage(),
-        //Lista de Exoplanetas
-        '/exoplanets': (_) => ExoplanetTypePage(),
-        //Lista Spacex
-        '/spacex': (_) => SpacexBlocImplementation(),
-        //Lista Observatorios
-        '/observatorios': (_) => ObservatoriosPage(),
-      },
+    return RepositoryProvider(
+      create: (context) => AuthRepository(),
+      child: BlocProvider(
+        create: (context) => AuthBloc(
+          authRepository: RepositoryProvider.of<AuthRepository>(context),
+        ),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(primarySwatch: Colors.deepPurple),
+          initialRoute: '/splash',
+          routes: {
+            //Animação inicial da aplicação
+            '/splash': (_) => SplashPage(),
+            //Tela de Login
+            '/login': (_) => LoginPage(),
+            //Tela de Cadastro
+            '/register': (_) => RegisterPage(),
+            //Tela de boas-vindas
+            '/welcome': (_) => WelcomePage(),
+            //Tela inicial, que contem os temas
+            '/home': (_) => HomePage(),
+            //Lista Sistema Solar
+            '/sistemasolar': (_) => SolarSystemBlocImpl(),
+            //Lista de Noticias
+            '/news': (_) => NewsPage(),
+            //Lista de Exoplanetas
+            '/exoplanets': (_) => ExoplanetTypePage(),
+            //Lista Spacex
+            '/spacex': (_) => SpacexBlocImplementation(),
+            //Lista Observatorios
+            '/observatorios': (_) => ObservatoriosPage(),
+            '/authenticated': (_) => HomeStreamBuilder(),
+
+          },
+        ),
+      ),
     );
   }
 }

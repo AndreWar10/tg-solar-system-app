@@ -44,6 +44,15 @@ dependencies:
   intl:
   #icone
   flutter_launcher_icons: ^0.10.0  
+  cloud_firestore: ^3.2.1
+  firebase_core: ^1.20.0
+  firebase_auth: ^3.6.2
+  email_validator: '^2.1.16'
+  #google_sign_in: ^4.0.1+1
+
+  flutter_statusbarcolor_ns: ^0.4.0
+  provider:
+
 
 
   # The following adds the Cupertino Icons font to your application.

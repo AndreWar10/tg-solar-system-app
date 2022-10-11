@@ -33,12 +33,13 @@ class DetailSolarSystemPage extends StatelessWidget {
         DetailCabecalhoWidget(planet: widget.planet),
         SliverToBoxAdapter(
           child: SizedBox(
-            height: MediaQuery.of(context).size.height * 0.9, //tela inteira
+            height: MediaQuery.of(context).size.height , //tela inteira
             child: Stack(
               children: [
                 DetailColorBackgroundWidget(widget: widget),
                 Container(
                   width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -48,23 +49,27 @@ class DetailSolarSystemPage extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
-                    child: Column(
-                      children: [
-                        DetailSeparationWidget(),
-                        SizedBox(height: 25),
-                        DetailOverviewWidget(),
-                        SizedBox(height: 20),
-                        DetailTitleAndShare(widget: widget),
-                        SizedBox(height: 10),
-                        DetailSubtitleWidget(widget: widget),
-                        SizedBox(height: 10),
-                        DetailTextoWidget(widget: widget),
-                        SizedBox(height: 20),
-                        DetailTecnicalInformationWidget(widget: widget),
-                        SizedBox(height: 25),
-                        DetailPlayVideoWidget(widget: widget),
-                        
-                      ],
+                    child: SingleChildScrollView(
+                      physics:NeverScrollableScrollPhysics() ,
+                      child: Column(
+                        children: [
+                          DetailSeparationWidget(),
+                          SizedBox(height: 25),
+                          DetailOverviewWidget(),
+                          SizedBox(height: 20),
+                          DetailTitleAndShare(widget: widget),
+                          SizedBox(height: 10),
+                          DetailSubtitleWidget(widget: widget),
+                          SizedBox(height: 10),
+                          DetailTextoWidget(widget: widget),
+                          SizedBox(height: 20),
+                          DetailTecnicalInformationWidget(widget: widget),
+                          SizedBox(height: 25),
+                          DetailPlayVideoWidget(widget: widget),
+                          
+                          
+                        ],
+                      ),
                     ),
                   ),
                 ),

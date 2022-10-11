@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisterTermsConditionsWidget extends StatelessWidget {
+class RegisterTermsConditionsWidget extends StatefulWidget {
   const RegisterTermsConditionsWidget({
     Key? key,
   }) :  super(key: key);
 
-  final bool _checkvalue = false;
+  @override
+  State<RegisterTermsConditionsWidget> createState() => _RegisterTermsConditionsWidgetState();
+}
+
+class _RegisterTermsConditionsWidgetState extends State<RegisterTermsConditionsWidget> {
+  bool _checkvalue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +22,9 @@ class RegisterTermsConditionsWidget extends StatelessWidget {
           Checkbox(
               value: _checkvalue,
               onChanged: (value) {
-                // setState(() {
-                //   _checkvalue = value!;
-                // });
+                setState(() {
+                  _checkvalue = value!;
+                });
               }),
           Text(
             'Estou de acordo com os ',

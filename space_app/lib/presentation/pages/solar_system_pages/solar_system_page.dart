@@ -45,7 +45,7 @@ class SolarSystemPage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 12, right: 12),
-                    child: SolarSystemInputWidget(),
+                    child: SolarSystemInputWidget(state: state,),
                   ),
                   SizedBox(height: 40),
                   GridViewSolarSystem(state: state)

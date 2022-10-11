@@ -7,11 +7,15 @@ class CustomRegisterTextField extends StatefulWidget {
     required this.hintText,
     required this.isPass,
     this.controller,
+    this.autovalidateMode,
+    this.validator,
   }) : super(key: key);
 
   final TextEditingController? controller;
   final String hintText;
   final bool isPass;
+  final AutovalidateMode? autovalidateMode;
+  final String? Function(String?)? validator;
 
   @override
   State<CustomRegisterTextField> createState() =>
@@ -35,14 +39,17 @@ class _CustomRegisterTextFieldState extends State<CustomRegisterTextField> {
         child: Padding(
           padding: const EdgeInsets.only(left: 20.0, top: 4),
           child: widget.isPass == false
-              ? TextField(
+              ? TextFormField(
                   controller: widget.controller,
+                  autovalidateMode: widget.autovalidateMode,
+                  validator: widget.validator,
                   decoration: InputDecoration(
                       border: InputBorder.none, hintText: widget.hintText),
-                                        style: GoogleFonts.montserrat()
-
-                )
-              : TextField(
+                  style: GoogleFonts.montserrat())
+              : TextFormField(
+                  controller: widget.controller,
+                  autovalidateMode: widget.autovalidateMode,
+                  validator: widget.validator,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: widget.hintText,
@@ -59,7 +66,7 @@ class _CustomRegisterTextFieldState extends State<CustomRegisterTextField> {
                       },
                     ),
                   ),
-                   style: GoogleFonts.montserrat(),
+                  style: GoogleFonts.montserrat(),
                   obscureText: _showPassword == false
                       ? true
                       : false, //esconder/mostrar password

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../widgets/register_widgets/register_astronaut_widget.dart';
-import '../../widgets/register_widgets/register_back_to_login_widget.dart';
-import '../../widgets/register_widgets/register_button_widget.dart';
-import '../../widgets/register_widgets/register_subtitle_widget.dart';
-import '../../widgets/register_widgets/register_terms_conditions_widget.dart';
-import '../../widgets/register_widgets/register_text_field_widget.dart';
-import '../../widgets/register_widgets/register_title_widget.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../bloc/auth/auth_bloc.dart';
+import '../../widgets/register_widgets/form_register_widget.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -15,52 +11,62 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final TextEditingController _emailTextController = TextEditingController();
-  final TextEditingController _senhaTextController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _nameController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+     _nameController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        backgroundColor: Colors.grey[300],
-        body: SingleChildScrollView(
-          reverse: true,
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(height: 70),
-                //Imagem Astronauta
-                RegisterAstronautWidget(),
-                //Titulo da tela
-                RegisterTitleWidget(),
-                SizedBox(height: 10),
-                //Subtitulo da tela
-                RegisterSubtitleWidget(),
-                SizedBox(height: 45),
-                //Email
-                CustomRegisterTextField(controller: _emailTextController, hintText: 'Email', isPass: false),
-                SizedBox(height: 10),
-                //Senha
-                CustomRegisterTextField(controller: _senhaTextController,hintText: 'Senha',isPass: true),
-                SizedBox(height: 10),
-                //Confirma Senha
-                CustomRegisterTextField(hintText: 'Confirmação de Senha', isPass: true),
-                SizedBox(height: 10),
-                //Termos e condições
-                RegisterTermsConditionsWidget(),
-                SizedBox(height: 90),
-                //Botão Criar conta
-                RegisterButtonWidget(),
-                SizedBox(height: 10),
-                //Ja tem conta
-                RegisterBackToLoginWidget()
-              ],
-            ),
-          ),
-        ),
-      ),
+          backgroundColor: Colors.grey[300],
+          body: BlocConsumer<AuthBloc, AuthState>(listener: (context, state) {
+            if (state is Authenticated) {
+              context.read<AuthBloc>().add(
+                    SignOutRequested(),
+                  );
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(state.sucess)));
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                '/login',
+                (route) => false,
+              );
+            }
+
+            if (state is AuthError) {
+              //Display the error message if the user is not authenticated
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(state.error)));
+            }
+          }, builder: (context, state) {
+            if (state is Loading) {
+              //Display the custom loading indicator while user is signing up
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (state is UnAuthenticated) {
+              //Displaying the sign up form if the user is not authenticated
+              return FormRegisterWidget(
+                formKey: _formKey,
+                emailController: _emailController,
+                passwordController: _passwordController,
+                confirmPasswordController: _confirmPasswordController, nameController: _nameController,
+              );
+            }
+            return Container();
+          })),
     );
   }
 }

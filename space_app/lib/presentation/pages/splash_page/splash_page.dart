@@ -11,7 +11,8 @@ class SplashPage extends StatefulWidget {
 
 class SplashPageState extends State<SplashPage> {
 
-  final String _defaultRoute = "/welcome";
+  final String _defaultRoute = "/authenticated";
+  
 
   @override
   void initState() {

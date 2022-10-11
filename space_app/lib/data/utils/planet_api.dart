@@ -20,8 +20,8 @@ class PlanetApi {
       final List planetas = json.decode(response.body);
 
       return planetas.map((json) => Planet.fromJson(json)).where((planet) {
-        final nameLower = planet.name.toLowerCase();
-        final queryLower = query.toLowerCase();
+        final nameLower = planet.name;
+        final queryLower = query;
 
         return nameLower.contains(queryLower);
       }).toList();

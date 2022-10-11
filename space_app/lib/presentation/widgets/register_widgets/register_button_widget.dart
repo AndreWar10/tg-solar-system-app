@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../bloc/auth/auth_bloc.dart';
 
 class RegisterButtonWidget extends StatelessWidget {
   const RegisterButtonWidget({
     Key? key,
-  }) : super(key: key);
+    required GlobalKey<FormState> formKey,
+    required TextEditingController emailController,
+    required TextEditingController passwordController,
+    required TextEditingController nomeController,
+  }) : _formKey = formKey, _emailController = emailController, _passwordController = passwordController, _nomeController =nomeController, super(key: key);
+
+  final GlobalKey<FormState> _formKey;
+  final TextEditingController _emailController;
+  final TextEditingController _passwordController;
+  final TextEditingController _nomeController;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +37,8 @@ class RegisterButtonWidget extends StatelessWidget {
             ),
           ),
           onPressed: () {
+                    _createAccountWithEmailAndPassword(context,_formKey, _emailController, _passwordController, _nomeController);
+                    
             // FirebaseAuth.instance
             //     .createUserWithEmailAndPassword(
             //         email: _emailTextController.text,
@@ -51,3 +65,19 @@ class RegisterButtonWidget extends StatelessWidget {
     );
   }
 }
+
+ //method for validation the register in firebase data
+  void _createAccountWithEmailAndPassword(context, formKey, emailController, passwordController, displayName) {
+    if (formKey.currentState!.validate()) {
+      BlocProvider.of<AuthBloc>(context).add(
+        SignUpRequested(
+          emailController.text,
+          passwordController.text,
+          displayName.text,
+          
+        ),
+      );
+    }
+  
+
+  }
