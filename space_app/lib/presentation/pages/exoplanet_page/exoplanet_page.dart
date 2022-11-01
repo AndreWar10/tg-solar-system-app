@@ -6,6 +6,7 @@ import '../../bloc/exoplanets_bloc/exoplanet_event.dart';
 import '../../bloc/exoplanets_bloc/exoplanet_state.dart';
 import '../../widgets/custom/custom_loading_page.dart';
 import '../../widgets/exoplanets_widgets/exoplanet_list_view_widget.dart';
+import '../error_page/error_network_page.dart';
 
 class ExoplanetPage extends StatelessWidget {
   const ExoplanetPage({
@@ -29,9 +30,7 @@ class ExoplanetPage extends StatelessWidget {
             viewNoHabitable: viewNoHabitable,
           );
         } else if (state is ExoplanetIsError) {
-          return const Center(
-            child: Text('Error'),
-          );
+          return ErrorNetworkPage();
         } else if (state is ExoplanetIsEmpty) {
           return CustomLoadingPage();
         } else {
@@ -43,7 +42,3 @@ class ExoplanetPage extends StatelessWidget {
     );
   }
 }
-
-
-
-

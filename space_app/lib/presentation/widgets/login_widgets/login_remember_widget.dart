@@ -1,40 +1,35 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class LoginRememberWidget extends StatefulWidget {
-   const LoginRememberWidget({
+import '../../pages/forgotpassword/forgotpassword.dart';
+
+class ForgotPassWidget extends StatelessWidget {
+  const ForgotPassWidget({
     Key? key,
-   
-  }) :  super(key: key);
-
-  @override
-  State<LoginRememberWidget> createState() => _LoginRememberWidgetState();
-}
-
-class _LoginRememberWidgetState extends State<LoginRememberWidget> {
-  bool _checkvalue = false;
-  final String _defaultText = "Lembrar minha senha";
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10),
-      child: Row(
-        children: [
-          Checkbox(
-              value: _checkvalue,
-              onChanged: (value) {
-                setState(() {
-                  _checkvalue = value!;
-                });
-              }),
-          Text(
-            _defaultText,
-            style: GoogleFonts.montserrat(
-              fontSize: 12,
-            ),
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 12, right: 20),
+        child: RichText(
+          text: TextSpan(
+            text: 'Esqueceu a senha?',
+            style: TextStyle(
+                color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ForgotPassword(),
+                  ),
+                );
+              },
           ),
-        ],
+        ),
       ),
     );
   }

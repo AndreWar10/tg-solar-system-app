@@ -58,7 +58,7 @@ class LoginBlocWidget extends StatelessWidget {
                   //Senha
                   CustomTextFormFieldWidget(isPass: true,hintText: 'Senha', controller: _passwordController,),
                   //Lembrar Login
-                  LoginRememberWidget(),
+                  ForgotPassWidget(),
                   SizedBox(height: 50),
                   //Botão Login
                   LoginButtonWidget( formKey: _formKey,

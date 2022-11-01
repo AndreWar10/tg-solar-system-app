@@ -21,7 +21,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           await authRepository.signIn(
               email: event.email, password: event.password);
           emit(
-            Authenticated('Sucesso!'),
+            Authenticated('Login efetuado com sucesso!'),
           );
         } catch (e) {
           emit(
@@ -72,7 +72,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         } catch (e) {
           emit(
             AuthError(
-              e.toString(),
+              'Não foi possível criar sua conta',
             ),
           );
           emit(

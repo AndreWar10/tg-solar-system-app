@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../data/injection.dart';
+import '../../pages/error_page/error_network_page.dart';
 import '../../pages/spacex_page/spacex_page.dart';
 import '../../widgets/custom/custom_loading_page.dart';
 import 'spacex_bloc.dart';
@@ -13,25 +13,23 @@ class SpacexBlocImplementation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  BlocBuilder(
-        bloc: getIt.get<SpacexBloc>()..add(FetchSpacex()),
-        builder: (context, state) {
-          if (state is SpacexHasData) {
-            return SpacexPage(
-              spacex: state.spacex,
-            );
-          } else if (state is SpacexIsError) {
-            return const Center(
-              child: Text('Error'),
-            );
-          } else if (state is SpacexIsEmpty) {
-            return CustomLoadingPage();
-          } else {
-            return const Center(
-              child: Text(''),
-            );
-          }
-        },
-      );
+    return BlocBuilder(
+      bloc: getIt.get<SpacexBloc>()..add(FetchSpacex()),
+      builder: (context, state) {
+        if (state is SpacexHasData) {
+          return SpacexPage(
+            spacex: state.spacex,
+          );
+        } else if (state is SpacexIsError) {
+          return ErrorNetworkPage();
+        } else if (state is SpacexIsEmpty) {
+          return CustomLoadingPage();
+        } else {
+          return const Center(
+            child: Text(''),
+          );
+        }
+      },
+    );
   }
 }

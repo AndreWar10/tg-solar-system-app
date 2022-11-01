@@ -11,4 +11,4 @@ class API {
   //API Spacex
   static const String spacexBaseUrl = 'https://api.spacexdata.com/v2/launches';
   static String spacex = spacexBaseUrl;
-}
+} 
