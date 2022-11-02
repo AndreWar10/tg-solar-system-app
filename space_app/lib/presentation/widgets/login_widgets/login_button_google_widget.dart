@@ -5,8 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 class LoginButtonGoogleWidget extends StatelessWidget {
   const LoginButtonGoogleWidget({
-    Key? key,
+    Key? key, this.function,
   }) : super(key: key);
+
+  final dynamic function;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +29,9 @@ class LoginButtonGoogleWidget extends StatelessWidget {
           ),
         ),
         //Google login
-        onPressed: () {
-          //  BlocProvider.of<AuthBloc>(context).add(
-          // SignInGoogleRequested(),
-        //);
+        onPressed: ()  {
+          function;
+         
         },
         icon: FaIcon(
           FontAwesomeIcons.google,

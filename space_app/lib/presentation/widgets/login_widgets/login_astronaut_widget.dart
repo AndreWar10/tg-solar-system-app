@@ -5,14 +5,14 @@ class LoginAstronautWidget extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final String _defaultLoginAstronaut = "assets/astronauta/celular.png";
+  final String _defaultLoginAstronaut = "assets/astronauta/pc.png";
 
   @override
   Widget build(BuildContext context) {
     return Image.asset(
       _defaultLoginAstronaut,
-      width: 180,
-      height: 180,
+      width: 200,
+      height: 200,
     );
   }
 }

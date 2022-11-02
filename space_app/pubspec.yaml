@@ -48,7 +48,7 @@ dependencies:
   firebase_core: ^1.20.0
   firebase_auth: ^3.6.2
   email_validator: '^2.1.16'
-  #google_sign_in: ^4.0.1+1
+  google_sign_in:
 
   flutter_statusbarcolor_ns: ^0.4.0
   provider:
@@ -89,7 +89,7 @@ flutter:
     - assets/astronauta/cadastro.png
     - assets/astronauta/trabalhando.png
     - assets/astronauta/astronauta-home.png
-
+    - assets/astronauta/pc.png
     #imagem planetas
     - assets/planets/Mercúrio.png
     - assets/planets/Vênus.png

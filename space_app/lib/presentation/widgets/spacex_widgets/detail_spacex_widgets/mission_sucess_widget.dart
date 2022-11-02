@@ -22,9 +22,9 @@ class MissionSucessWidget extends StatelessWidget {
                   height: 50,
                   width: 160,
                   decoration: BoxDecoration(
-                      //color: Color(0xFF1C1E1F),
-                      color: Colors.green,
-                      border: Border.all(color: Colors.black),
+                      color: Color(0xFF1C1E1F),
+                      //color: Colors.green,
+                      border: Border.all(color: Colors.green),
                       borderRadius: BorderRadius.circular(12)),
                   child: Center(
                     child: Text(
@@ -42,9 +42,9 @@ class MissionSucessWidget extends StatelessWidget {
                   height: 50,
                   width: 160,
                   decoration: BoxDecoration(
-                      //color: Color(0xFF1C1E1F),
-                      color: Colors.red,
-                      border: Border.all(color: Colors.black),
+                      color: Color(0xFF1C1E1F),
+                      //color: Colors.red,
+                      border: Border.all(color: Colors.red),
                       borderRadius: BorderRadius.circular(12)),
                   child: Center(
                     child: Text(

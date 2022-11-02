@@ -36,28 +36,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       },
     );
 
-    // on<SignInGoogleRequested>(
-    //   (event, emit) async {
-    //     emit(
-    //       Loading(),
-    //     );
-    //     try {
-    //      await authRepository.signInWithGoogle();
-    //       emit(
-    //         Authenticated('Sucesso!'),
-    //       );
-    //     } catch (e) {
-    //       emit(
-    //         AuthError(
-    //           e.toString(),
-    //         ),
-    //       );
-    //       emit(
-    //         UnAuthenticated(),
-    //       );
-    //     }
-    //   },
-    // );
+     on<SignInGoogleRequested>((event, emit) async {
+      emit(Loading());
+      try {
+        await authRepository.signInWithGoogle();
+        emit(Authenticated('Login com google com sucesso'));
+      } catch (e) {
+        emit(AuthError(e.toString()));
+        emit(UnAuthenticated());
+      }
+    });
 
 
     on<SignUpRequested>(

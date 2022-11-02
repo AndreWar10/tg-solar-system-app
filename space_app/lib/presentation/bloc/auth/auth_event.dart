@@ -30,6 +30,5 @@ class ForgetPasswordRequest extends AuthEvent{
   ForgetPasswordRequest(this.email);
 }
 
-class GoogleSignInRequested extends AuthEvent {}
 
 class SignOutRequested extends AuthEvent {}
