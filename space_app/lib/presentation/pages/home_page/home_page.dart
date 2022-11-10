@@ -53,6 +53,11 @@ class HomePage extends StatelessWidget {
                             context.read<AuthBloc>().add(
                                   SignOutRequested(),
                                 );
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Usuário Deslogado com sucesso!'),
+                              ),
+                            );
                           },
                           child: Icon(
                             Icons.logout,

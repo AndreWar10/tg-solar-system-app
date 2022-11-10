@@ -40,7 +40,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(Loading());
       try {
         await authRepository.signInWithGoogle();
-        emit(Authenticated('Login com google com sucesso'));
+        emit(Authenticated('Autenticação Google realizada com sucesso'));
       } catch (e) {
         emit(AuthError(e.toString()));
         emit(UnAuthenticated());

@@ -127,6 +127,8 @@ flutter:
     - assets/icons/lancamentos.png
     #logo do app
     - assets/logo/planet.png
+    #default
+    - assets/default/default_news_image.jpg
 
 
 

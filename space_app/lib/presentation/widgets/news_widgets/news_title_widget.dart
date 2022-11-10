@@ -39,14 +39,19 @@ class NewsImageWidget extends StatelessWidget {
         topLeft: Radius.circular(8),
         topRight: Radius.circular(8),
       ),
-      child: Image.network(
-        news.imageUrl,
-        loadingBuilder: (_, child, progress) {
-          if (progress == null) return child;
-          return CircularProgressIndicator
-              .adaptive(); //adaptative muda de acordo com a plataforma android/ios,etc
-        },
-      ),
+      // ignore: unnecessary_null_comparison
+      child: news.imageUrl != null
+          ? Image.network(
+              news.imageUrl,
+              loadingBuilder: (_, child, progress) {
+                if (progress == null) return child;
+                return CircularProgressIndicator
+                    .adaptive(); //adaptative muda de acordo com a plataforma android/ios,etc
+              },
+            )
+          : Image.asset(
+              'assets/default/default_news_image.jpg',
+            ),
     );
   }
 }
