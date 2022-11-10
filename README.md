@@ -52,7 +52,7 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
   <table align="center">
   <tr>
     <td>
-      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/welcome.jpeg" alt="Search - version mobile" height="500px">
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/welcome.jpeg" alt="Search - version mobile" height="300px">
     </td>
     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/login.jpeg" alt="Details Page - version mobile" height="500px">
