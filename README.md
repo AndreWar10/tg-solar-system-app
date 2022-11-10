@@ -7,7 +7,7 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
 </div>  
   
 <div>  
-  O App é composto de uma animação inicial (Splash Page), um tela de Onboarding mostrando o funcionamento do App, Telas de Login/Registro/Recuperar Senha, Home Page, Help Page, Page  de Extrato com Paginação Infinita (Requisições de 10 em 10), Tela de Comprovante com compartilhamento. O login/registro está sendo autenticado pelo Firebase. Implantei bastante regras de UI/UX Design, Animação na tela de apresentação e Design do App. 
+The app consists of screens that make HTTP requests to the REST API, using BLoC for state management, custom MVC, error handling, best practices, firebase authentication.
  </div>
 
   #
