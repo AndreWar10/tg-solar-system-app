@@ -14,131 +14,139 @@ class SolarSystemItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String planeta = planet.name;
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 14, right: 8, top: 32),
-          child: Container(
-            height: 250,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [planet.baseColor!, planet.baseColor2!],
-                  //colors: [Colors.deepOrange, Colors.black],
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                ),
-                //color: planet.baseColor!.withOpacity(0.8),
-                borderRadius: BorderRadius.circular(26)),
-            child: Padding(
-              padding: const EdgeInsets.all(15),
-              child: SingleChildScrollView(
-                physics: NeverScrollableScrollPhysics(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 75),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Flexible(
-                          child: Text(
-                            planet.name,
-                            style: GoogleFonts.montserrat(
-                              fontSize: 22,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          '#${planet.id}',
-                          style: TextStyle(
-                              color: Colors.black.withOpacity(0.4),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Wrap(
-                      children: [
-                        Text(
-                          planet.resume,
-                          style: GoogleFonts.montserrat(
-                            fontSize: 12,
-                            color: Colors.white,
-                          ),
-                          maxLines: 5,
-                          overflow: TextOverflow.ellipsis,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 0,
-                    ),
-                  
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(15.0, 20.0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        primary: Color.fromARGB(255, 233, 233, 233),
-                      ),
-                      onPressed: () {
-                       Navigator.push(
+    return GestureDetector(
+      onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
           builder: (_) => DetailSolarSystemContainer(planet: planet),
         ),
-                       );
-                      },
-                      child: Row(
+      ),
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 14, right: 8, top: 32),
+            child: Container(
+              height: 250,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [planet.baseColor!, planet.baseColor2!],
+                    //colors: [Colors.deepOrange, Colors.black],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                  ),
+                  //color: planet.baseColor!.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(26)),
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: SingleChildScrollView(
+                  physics: NeverScrollableScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 75),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 13),
+                          Flexible(
                             child: Text(
-                              'Saiba mais',
+                              planet.name,
                               style: GoogleFonts.montserrat(
-                                fontSize: 12,
-                                color: Colors.black,
+                                fontSize: 22,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 1),
-                            child: Icon(
-                              Icons.play_arrow,
-                              size: 14,
-                              color: Color.fromARGB(255, 49, 49, 49),
-                            ),
+                          Text(
+                            '#${planet.id}',
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.4),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Wrap(
+                        children: [
+                          Text(
+                            planet.resume,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.white,
+                            ),
+                            maxLines: 5,
+                            overflow: TextOverflow.ellipsis,
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 0,
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(15.0, 20.0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          primary: Color.fromARGB(255, 233, 233, 233),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  DetailSolarSystemContainer(planet: planet),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 13),
+                              child: Text(
+                                'Saiba mais',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 1),
+                              child: Icon(
+                                Icons.play_arrow,
+                                size: 14,
+                                color: Color.fromARGB(255, 49, 49, 49),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 14),
-          child: Image.asset(
-            'assets/planets/$planeta.png',
-            width: 115,
-            height: 115,
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
+            child: Image.asset(
+              'assets/planets/$planeta.png',
+              width: 115,
+              height: 115,
+            ),
+            // SvgPicture.network(
+            //   planet.image,
+            //   allowDrawingOutsideViewBox: true,
+            //   height: 120,
+            // ),
           ),
-          // SvgPicture.network(
-          //   planet.image,
-          //   allowDrawingOutsideViewBox: true,
-          //   height: 120,
-          // ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

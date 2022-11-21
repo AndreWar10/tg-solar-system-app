@@ -10,7 +10,6 @@ class DetailFotoListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String planeta = planet.name;
-
     return Align(
       alignment: Alignment.center,
       child: Image.asset(
