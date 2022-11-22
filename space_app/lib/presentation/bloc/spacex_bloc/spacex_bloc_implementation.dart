@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/injection.dart';
 import '../../pages/error_page/error_network_page.dart';
 import '../../pages/spacex_page/spacex_page.dart';
-import '../../widgets/custom/custom_loading_page.dart';
+import '../../widgets/loading/custom_loading_widget.dart';
 import 'spacex_bloc.dart';
 import 'spacex_event.dart';
 import 'spacex_state.dart';
@@ -23,7 +23,7 @@ class SpacexBlocImplementation extends StatelessWidget {
         } else if (state is SpacexIsError) {
           return ErrorNetworkPage();
         } else if (state is SpacexIsEmpty) {
-          return CustomLoadingPage();
+          return CustomLoadingWidget();
         } else {
           return const Center(
             child: Text(''),

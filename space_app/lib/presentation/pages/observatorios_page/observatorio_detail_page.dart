@@ -21,15 +21,12 @@ class ObservatorioDetailPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 4.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
-                ),
-                child: Image.asset(observatorio.image),
+            ClipRRect(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(8),
+                bottomRight: Radius.circular(8),
               ),
+              child: Image.asset(observatorio.image),
             ),
             SizedBox(height: 30),
             Padding(
@@ -164,7 +161,7 @@ class ObservatorioDetailPage extends StatelessWidget {
                 await Share.share('${observatorio.name}\n\n$urlPreview');
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                 child: Row(
                   children: [
                     Icon(

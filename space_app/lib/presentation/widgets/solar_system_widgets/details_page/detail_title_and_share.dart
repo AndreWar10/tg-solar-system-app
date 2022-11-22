@@ -36,7 +36,7 @@ class DetailTitleAndShare extends StatelessWidget {
               var urlPreview =
                   widget.planet.video!.toString();
               await Share.share(
-                  'Veja que vídeo interessante que obtive gratuitamente no App da SolarSystem 👇 \n\n$urlPreview');
+                  'Veja que vídeo interessante que obtive gratuitamente no App Keep Looking Up 👇 \n\n$urlPreview');
             },
           ),
         ),

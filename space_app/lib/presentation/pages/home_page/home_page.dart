@@ -55,6 +55,7 @@ class HomePage extends StatelessWidget {
                                 );
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
+                                backgroundColor: Colors.deepPurpleAccent,
                                 content: Text('Usuário Deslogado com sucesso!'),
                               ),
                             );

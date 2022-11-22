@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
+import '../loading/custom_loading_widget.dart';
 import 'custom_text_form_field.dart';
 import 'login_astronaut_widget.dart';
 import 'login_button_widget.dart';
@@ -33,9 +34,7 @@ class LoginBlocWidget extends StatelessWidget {
     return BlocBuilder<AuthBloc, AuthState>(
       builder: (context, state) {
         if (state is Loading) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
+          return CustomLoadingWidget();
         }
         if (state is UnAuthenticated) {
           return SingleChildScrollView(

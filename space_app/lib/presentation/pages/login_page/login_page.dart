@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
               if (state is Authenticated) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
+                    backgroundColor: Colors.deepPurpleAccent,
                     content: Text(state.sucess),
                   ),
                 );
@@ -47,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
               if (state is AuthError) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
+                    backgroundColor: Colors.red,
                     content: Text(state.error),
                   ),
                 );

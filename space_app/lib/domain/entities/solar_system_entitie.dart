@@ -136,11 +136,11 @@ class SystemSolarEntitie extends Equatable {
       case '1':
         return 'https://www.youtube.com/watch?v=Nt1roYm0jPQ';
       case '2':
-        return 'https://www.youtube.com/watch?v=-FJ34qWCSYY';
+        return 'https://www.youtube.com/watch?v=T5bDge0m6FI';
       case '3':
         return 'https://www.youtube.com/watch?v=lEePi92HCuI';
       case '4':
-        return 'https://www.youtube.com/watch?v=ImpreapHhHY';
+        return 'https://www.youtube.com/watch?v=_O47N1cGybA';
       case '5':
         return 'https://www.youtube.com/watch?v=NP0ymdPeW7w';
       case '6':

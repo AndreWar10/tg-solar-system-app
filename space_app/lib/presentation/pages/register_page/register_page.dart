@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../bloc/auth/auth_bloc.dart';
+import '../../widgets/loading/custom_loading_widget.dart';
 import '../../widgets/register_widgets/form_register_widget.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
-     _nameController.dispose();
+    _nameController.dispose();
     super.dispose();
   }
 
@@ -33,28 +34,33 @@ class _RegisterPageState extends State<RegisterPage> {
           backgroundColor: Colors.grey[300],
           body: BlocConsumer<AuthBloc, AuthState>(listener: (context, state) {
             if (state is Authenticated) {
-              context.read<AuthBloc>().add(
-                    SignOutRequested(),
-                  );
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.sucess)));
+              context.read<AuthBloc>().add(SignOutRequested());
+
               Navigator.of(context).pushNamedAndRemoveUntil(
                 '/login',
                 (route) => false,
+              );
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.deepPurpleAccent,
+                  content: Text(state.sucess),
+                ),
               );
             }
 
             if (state is AuthError) {
               //Display the error message if the user is not authenticated
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.error)));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.red,
+                  content: Text(state.error),
+                ),
+              );
             }
           }, builder: (context, state) {
             if (state is Loading) {
               //Display the custom loading indicator while user is signing up
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
+              return CustomLoadingWidget();
             }
             if (state is UnAuthenticated) {
               //Displaying the sign up form if the user is not authenticated
@@ -62,7 +68,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 formKey: _formKey,
                 emailController: _emailController,
                 passwordController: _passwordController,
-                confirmPasswordController: _confirmPasswordController, nameController: _nameController,
+                confirmPasswordController: _confirmPasswordController,
+                nameController: _nameController,
               );
             }
             return Container();

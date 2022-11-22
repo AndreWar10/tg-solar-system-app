@@ -124,11 +124,18 @@ class DetailTecnicalInformationWidget extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            widget.planet.features.temperature != '' ?
             Text(
               widget.planet.features.temperature.toString(),
               style: GoogleFonts.montserrat(
                   fontSize: 14, fontWeight: FontWeight.bold),
+            ):
+Text(
+              'Não informado',
+              style: GoogleFonts.montserrat(
+                  fontSize: 14, fontWeight: FontWeight.bold),
             ),
+
             Spacer(),
             Text(
               widget.planet.features.radius,

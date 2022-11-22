@@ -4,8 +4,8 @@ import '../../../data/injection.dart';
 import '../../bloc/exoplanets_bloc/exoplanet_bloc.dart';
 import '../../bloc/exoplanets_bloc/exoplanet_event.dart';
 import '../../bloc/exoplanets_bloc/exoplanet_state.dart';
-import '../../widgets/custom/custom_loading_page.dart';
 import '../../widgets/exoplanets_widgets/exoplanet_list_view_widget.dart';
+import '../../widgets/loading/custom_loading_widget.dart';
 import '../error_page/error_network_page.dart';
 
 class ExoplanetPage extends StatelessWidget {
@@ -32,7 +32,7 @@ class ExoplanetPage extends StatelessWidget {
         } else if (state is ExoplanetIsError) {
           return ErrorNetworkPage();
         } else if (state is ExoplanetIsEmpty) {
-          return CustomLoadingPage();
+          return CustomLoadingWidget();
         } else {
           return const Center(
             child: Text(''),

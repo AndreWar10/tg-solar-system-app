@@ -8,6 +8,7 @@ import '../datasources/exoplanet_remote_datasource.dart';
 
 class ExoplanetRepositoryImpl implements ExoplanetRepository {
   final ExoplanetRemoteDataSource exoplanetRemoteDataSource;
+  
   ExoplanetRepositoryImpl({required this.exoplanetRemoteDataSource});
 
   @override

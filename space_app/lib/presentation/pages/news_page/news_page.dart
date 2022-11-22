@@ -5,7 +5,7 @@ import '../../../data/injection.dart';
 import '../../bloc/news_bloc/news_bloc.dart';
 import '../../bloc/news_bloc/news_event.dart';
 import '../../bloc/news_bloc/news_state.dart';
-import '../../widgets/custom/custom_loading_page.dart';
+import '../../widgets/loading/custom_loading_widget.dart';
 import '../../widgets/news_widgets/news_list_view.dart';
 import '../error_page/error_network_page.dart';
 
@@ -55,7 +55,7 @@ class _NewsPageState extends State<NewsPage> {
             } else if (state is NewsIsError) {
              return ErrorNetworkPage();
             } else if (state is NewsIsEmpty) {
-              return CustomLoadingPage();
+              return CustomLoadingWidget();
             } else {
               return const Center(
                 child: Text(''),

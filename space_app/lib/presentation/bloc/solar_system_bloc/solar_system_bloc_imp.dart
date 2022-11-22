@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/injection.dart';
 import '../../pages/error_page/error_network_page.dart';
-import '../../widgets/custom/custom_loading_page.dart';
+import '../../widgets/loading/custom_loading_widget.dart';
 import 'solar_system_bloc.dart';
 import 'solar_system_event.dart';
 import 'solar_system_state.dart';
@@ -29,7 +29,7 @@ class _SolarSystemBlocImplState extends State<SolarSystemBlocImpl> {
           } else if (state is SolarSystemIsError) {
             return ErrorNetworkPage();
           } else if (state is SolarSystemIsEmpty) {
-            return CustomLoadingPage();
+            return CustomLoadingWidget();
           } else {
             return const Center(
               child: Text(''),

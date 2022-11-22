@@ -19,33 +19,18 @@ class DetailPlayVideoWidget extends StatelessWidget {
         final Uri url = Uri.parse(widget.planet.video!);
         await launchUrl(url);
       },
-      child: Row(
-        children: [
-          Icon(Icons.play_arrow, color: Colors.deepPurpleAccent, size: 30,),
-          Text('Assistir Vídeo', style:  GoogleFonts.montserrat(
-            fontSize: 18,
-            fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),
-          ),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 14),
+        child: Row(
+          children: [
+            Icon(Icons.play_arrow, color: Colors.deepPurpleAccent, size: 30,),
+            Text('Assistir Vídeo', style:  GoogleFonts.montserrat(
+              fontSize: 18,
+              fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent),
+            ),
 
-          // ElevatedButton(
-          //   style: ElevatedButton.styleFrom(
-          //     shape: RoundedRectangleBorder(
-          //       borderRadius: BorderRadius.circular(30),
-          //     ),
-          //     primary: Colors.black,
-          //   ),
-          //   onPressed: () async {
-          //     final Uri url = Uri.parse(widget.planet.video!);
-          //     await launchUrl(url);
-          //   },
-          //   child: Row(
-          //     children: const [
-          //       Text('Assistir vídeo'),
-          //       Icon(Icons.play_arrow),
-          //     ],
-          //   ),
-          // ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -31,8 +31,12 @@ class ForgotPasswordButtomWidget extends StatelessWidget {
         FirebaseAuth.instance
             .sendPasswordResetEmail(email: _emailController.text)
             .then((value) => Navigator.of(context).pop());
+
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Verifique seu Email')),
+          SnackBar(
+            backgroundColor: Colors.deepPurpleAccent,
+            content: Text('Verifique seu Email'),
+          ),
         );
       },
       marginContainerButtom: EdgeInsets.fromLTRB(0, 8, 0, 8),

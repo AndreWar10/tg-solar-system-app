@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../widgets/solar_system_widgets/details_page/container_solar_system_details.dart';
 import '../../widgets/solar_system_widgets/details_page/detail_app_bar_widget.dart';
 import '../../widgets/solar_system_widgets/details_page/detail_cabecalho_widget.dart';
-import '../../widgets/solar_system_widgets/details_page/detail_color_background_widget.dart';
 import '../../widgets/solar_system_widgets/details_page/detail_overview_widget.dart';
 import '../../widgets/solar_system_widgets/details_page/detail_play_video_widget.dart';
 import '../../widgets/solar_system_widgets/details_page/detail_separation.dart';
@@ -32,14 +31,13 @@ class DetailSolarSystemPage extends StatelessWidget {
         DetailAppBarWidget(planet: widget.planet, isOnTop: isOnTop),
         DetailCabecalhoWidget(planet: widget.planet),
         SliverToBoxAdapter(
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height , //tela inteira
+          child: Container(
+      color: widget.planet.baseColor,
             child: Stack(
               children: [
-                DetailColorBackgroundWidget(widget: widget),
+                //DetailColorBackgroundWidget(widget: widget),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
