@@ -7,7 +7,7 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
 </div>  
   
 <div>  
-  O App é composto de uma animação inicial (Splash Page), um tela de Onboarding mostrando o funcionamento do App, Telas de Login/Registro/Recuperar Senha, Home Page, Help Page, Page  de Extrato com Paginação Infinita (Requisições de 10 em 10), Tela de Comprovante com compartilhamento. O login/registro está sendo autenticado pelo Firebase. Implantei bastante regras de UI/UX Design, Animação na tela de apresentação e Design do App. 
+The app consists of screens that make HTTP requests to the REST API, using BLoC for state management, custom MVC, error handling, best practices, firebase authentication.
  </div>
 
   #
@@ -52,32 +52,75 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
   <table align="center">
   <tr>
     <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/onboard1.jpeg" alt="Search - version mobile" height="500px">
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/login.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
     <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/onboard2.jpeg" alt="Details Page - version mobile" height="500px">
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/cadastro.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-    <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/onboard3.jpeg" alt="Details Page - version mobile" height="500px">
-    </td>
-     
+  </tr>  
   </table>
   
 #
-  
-  <table align="center">
+
+<table align="center">
   <tr>
-    <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/home.jpeg" alt="Details Page - version mobile" height="500px">
+       <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/welcome.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-    <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/extrato.jpeg" alt="Details Page - version mobile" height="500px">
+     <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/homepage.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-    <td>
-      <img src="https://github.com/AndreWar10/green-bank-compass-app/blob/master/assets/images/comprovante.jpeg" alt="Details Page - version mobile" height="500px">
-    </td>
-    
   </table>
+  
+#
+
+<table align="center">
+  <tr>
+       <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/sistema1.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+     <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/sistema2.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+  </table>
+  
+#
+
+<table align="center">
+  <tr>
+       <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/noticia1.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+     <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/noticia2.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+  </table>
+  
+ #
+
+<table align="center">
+  <tr>
+       <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/launches1.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+     <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/launches2.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+  </table>
+  
+ #
+
+<table align="center">
+  <tr>
+       <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/observatorio1.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+     <td>
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/observatorio2.jpeg" alt="Details Page - version mobile" height="500px">
+    </td>
+  </table>
+  
+  
     
 <div align="center">  
   <strong> 💼 Tecnologias utilizadas: </strong>
@@ -85,12 +128,13 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
 
 <table align="center">
  <tr>
-  <td>Framework Flutter</td>  
+  <td>Dart/Flutter</td>  
   <td>SOLID</td>
   <td>BLoC</td>
   <td>Firebase</td>
-  <td>Http Package</td>
-  <td>Lottie Animation</td>
+  <td>Http</td>
+  <td>Lottie</td>
   <td>Figma</td>
+  <td>Insomnia</td>
  </tr>
 </table>
