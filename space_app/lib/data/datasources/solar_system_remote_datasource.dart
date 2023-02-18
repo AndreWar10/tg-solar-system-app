@@ -22,7 +22,7 @@ class SolarSystemRemoteDataSourceImpl implements SolarSystemRemoteDataSource {
     if (response.statusCode == 200) {
       // ignore: avoid_print
       print(response.body);
-      var decodedResponse = await json.decode(response.body);
+      var decodedResponse = await jsonDecode(utf8.decode(response.bodyBytes));
       List<SolarSystemModel> solarSystem = [
         for (final e in decodedResponse) SolarSystemModel.fromJson(e)
       ];

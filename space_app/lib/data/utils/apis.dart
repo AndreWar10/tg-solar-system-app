@@ -1,6 +1,7 @@
 class API {
   //API Sistema Solar 
-  static const String solarSystemBaseUrl = 'https://api-solar-system.herokuapp.com/planets';
+  static const String solarSystemBaseUrl = 'https://63ee56ee5e9f1583bdc10f2c.mockapi.io/api/v1/systemSolar';
+  //'https://api-solar-system.herokuapp.com/planets';
   static String solarSystem = solarSystemBaseUrl;
   //API Notícias Astronômicas
   static const String newsBaseUrl = 'https://api.spaceflightnewsapi.net/v3/articles';

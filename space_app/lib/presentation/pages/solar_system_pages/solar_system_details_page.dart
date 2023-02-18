@@ -32,7 +32,7 @@ class DetailSolarSystemPage extends StatelessWidget {
         DetailCabecalhoWidget(planet: widget.planet),
         SliverToBoxAdapter(
           child: Container(
-      color: widget.planet.baseColor,
+            color: widget.planet.baseColor,
             child: Stack(
               children: [
                 //DetailColorBackgroundWidget(widget: widget),
@@ -48,7 +48,7 @@ class DetailSolarSystemPage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
                     child: SingleChildScrollView(
-                      physics:NeverScrollableScrollPhysics() ,
+                      physics: NeverScrollableScrollPhysics(),
                       child: Column(
                         children: [
                           DetailSeparationWidget(),
@@ -64,8 +64,6 @@ class DetailSolarSystemPage extends StatelessWidget {
                           DetailTecnicalInformationWidget(widget: widget),
                           SizedBox(height: 25),
                           DetailPlayVideoWidget(widget: widget),
-                          
-                          
                         ],
                       ),
                     ),

@@ -1,6 +1,8 @@
 buildscript {
     ext.kotlin_version = '1.6.10'
     repositories {
+        classpath 'com.google.gms:google-services:4.3.3'
+        apply plugin: 'com.google.gms.google-services'
         google()
         mavenCentral()
     }
@@ -30,3 +32,4 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

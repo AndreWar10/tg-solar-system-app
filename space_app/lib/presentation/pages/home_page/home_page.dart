@@ -21,7 +21,6 @@ class HomePage extends StatelessWidget {
         body: BlocListener<AuthBloc, AuthState>(
           listener: (context, state) {
             if (state is UnAuthenticated) {
-              // Navigate to the sign in screen when the user Signs Out
               Navigator.of(context).pushNamedAndRemoveUntil(
                 '/authenticated',
                 (route) => false,
