@@ -1,3 +1,7 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=B101F1&height=120&section=header"/>
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=B101F1&size=40&center=true&vCenter=true&width=1000&lines=Welcome+to+Keep+Looking+Up+App+👨‍🚀🪐)](https://git.io/typing-svg)
+
 <div> 
   <strong>🪐Keep Looking Up </strong>
 </div>
@@ -9,6 +13,10 @@ Repositório para um projeto de TCC, da FATEC no curso de análise e desenvolvim
 <div>  
 The app consists of screens that make HTTP requests to the REST API, using BLoC for state management, custom MVC, error handling, best practices, firebase authentication.
  </div>
+ 
+  #
+  
+  https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-b336-02b33d4e176e.mp4
 
   #
 <div align="left"> 
@@ -49,14 +57,6 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
 
   #
 
-
-https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-b336-02b33d4e176e.mp4
-
-
-    
- 
-  #
-
   <table align="center">
   <tr>
     <td>
@@ -65,19 +65,13 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/cadastro.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-  </tr>  
-  </table>
-  
-#
-
-<table align="center">
-  <tr>
-       <td>
+     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/welcome.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/homepage.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
+  </tr>  
   </table>
   
 #
@@ -90,13 +84,7 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/sistema2.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-  </table>
-  
-#
-
-<table align="center">
-  <tr>
-       <td>
+     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/noticia1.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
      <td>
@@ -104,7 +92,8 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
     </td>
   </table>
   
- #
+#
+
 
 <table align="center">
   <tr>
@@ -114,13 +103,7 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/launches2.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
-  </table>
-  
- #
-
-<table align="center">
-  <tr>
-       <td>
+    <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/observatorio1.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
      <td>
@@ -128,7 +111,10 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
     </td>
   </table>
   
-  
+ #
+
+
+   
     
 <div align="center">  
   <strong> 💼 Tecnologias utilizadas: </strong>
@@ -146,3 +132,5 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
   <td>Insomnia</td>
  </tr>
 </table>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=B101F1&height=120&section=footer"/>
