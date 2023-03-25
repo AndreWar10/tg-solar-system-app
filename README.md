@@ -65,6 +65,13 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/cadastro.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
+  </tr>  
+  </table>
+  
+#
+
+<table align="center">
+  <tr>
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/welcome.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
@@ -84,6 +91,12 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/sistema2.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
+  </table>
+  
+#
+
+<table align="center">
+  <tr>
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/noticia1.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
@@ -103,6 +116,10 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
      <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/launches2.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
+  </table>
+  
+  <table align="center">
+  <tr>
     <td>
       <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/observatorio1.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
