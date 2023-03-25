@@ -1,6 +1,6 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=B101F1&height=120&section=header"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=B101F1&size=40&center=true&vCenter=true&width=1000&lines=Welcome+to+Keep+Looking+Up+App+👨‍🚀🪐)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=00bfbf&size=40&center=true&vCenter=true&width=1000&lines=Welcome+to+Keep+Looking+Up+App+👨‍🚀🪐)](https://git.io/typing-svg)
 
 <div> 
   <strong>🪐Keep Looking Up </strong>
@@ -150,4 +150,4 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
  </tr>
 </table>
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=B101F1&height=120&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00bfbf&height=120&section=footer"/>
