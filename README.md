@@ -60,10 +60,10 @@ https://user-images.githubusercontent.com/70041862/227690470-58ba313d-bb10-46c9-
   <table align="center">
   <tr>
     <td>
-      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/login.jpeg" alt="Details Page - version mobile" height="500em">
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/login.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
     <td>
-      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/cadastro.jpeg" alt="Details Page - version mobile" height="500em">
+      <img src="https://github.com/AndreWar10/tg-solar-system-app/blob/master/space_app/assets/github_screens/cadastro.jpeg" alt="Details Page - version mobile" height="500px">
     </td>
   </tr>  
   </table>
