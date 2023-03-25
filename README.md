@@ -55,7 +55,7 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
    <strong>09. Observatory Page:</strong> Tela de observatórios astronômicos.
 </div>
 
-  #
+<!--   #
 
   <table align="center">
   <tr>
@@ -129,9 +129,9 @@ The app consists of screens that make HTTP requests to the REST API, using BLoC 
   </table>
   
  #
+ -->
 
-
-   
+#
     
 <div align="center">  
   <strong> 💼 Tecnologias utilizadas: </strong>
